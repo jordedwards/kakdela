@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+      <form>
+        <div>
+          <label for="pswd">Enter the password</label>
+        </div>
+        <br/>
+        <div class="login-container">
+          <input type="text" id="password">
+          <input type="button" value="Submit" onclick="checkPassword();"/>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function checkPassword() {
+        const correctPassword = "aleksandra";
+        const password = document.getElementById("password").value;
+        if (password.toLowerCase() === correctPassword) {
+          window.location="timeline.html";
+        }
+        else{
+            alert("That password is incorrect");
+        }
+      }
+    </script>
+  </body>
+</html>
